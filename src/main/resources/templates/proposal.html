@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Question 💍</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="card">
+  <h1>Will you be my Valentine? 💖</h1>
+
+  <button onclick="yes()">YES 😍</button>
+  <button id="no" onmouseover="move()">NO 🙃</button>
+</div>
+
+<script>
+  function move() {
+    const btn = document.getElementById("no");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 300 + "px";
+    btn.style.top = Math.random() * 300 + "px";
+  }
+
+  function yes() {
+    window.location.href = "/yes";
+  }
+</script>
+
+</body>
+</html>

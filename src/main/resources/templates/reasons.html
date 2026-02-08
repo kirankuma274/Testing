@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reasons ❤️</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="card">
+    <h1>Reasons I Like You ❤️</h1>
+
+    <button onclick="show()">Reveal One 💕</button>
+
+    <p id="reason" style="margin-top:20px; font-size:18px;"></p>
+
+    <a href="/proposal">
+        <button>Next 😌</button>
+    </a>
+</div>
+
+<script>
+    const reasons = [
+        "You make boring days fun 😄",
+        "You laugh at my bad jokes 🤡",
+        "You’re cute even when angry 😤❤️",
+        "You feel like home 🏡",
+        "Honestly… I just like you 💕"
+    ];
+
+    let i = 0;
+    function show() {
+        if (i < reasons.length) {
+            document.getElementById("reason").innerText = reasons[i];
+            i++;
+        }
+    }
+</script>
+
+</body>
+</html>
